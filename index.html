@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <!-- FONTS end -->
   </head>
-  <body class="font-montserrat font-normal bg-light-creme text-primary-black m-0 px-4">
+  <body class="font-montserrat font-normal bg-light-creme text-primary-black">
     <!-- Header -->
-    <header class="container mx-auto  md:gap-4 py-8 flex items-center justify-between">
+    <header class="container mx-auto px-6 md:gap-4 py-8 flex items-center justify-between">
       <div class="logo py-8">
         <img src="assets/refyne-logo-black.svg" class="h-14 w-auto" src="your-logo.png" alt="Logo" />
       </div>
@@ -24,7 +24,7 @@
       </div>
     </header>
 
-    <section class="hero container mx-auto">
+    <section class="hero container mx-auto px-6 relative">
       <h3 class="text-primary-blue pb-4 pt-16 uppercase">Performance marketing bureau</h3>
       <h1 id="dynamicH1" class="font-serif text-5xl pb-9 leading-snug">
         Kan du se retningen for jeres marketing? <br />
@@ -32,12 +32,12 @@
       </h1>
       <p class="leading-relaxed">Vi forbedrer din forretning og din digitale tilstedeværelse gennem datadrevet markedsføring. Og din pris afhænger af din tilfredshed.</p>
       <div class="flex mt-10 gap-3">
-        <a href="#" class="cursor-pointer inline-flex items-center rounded-full px-9 py-3 font-mono text-primary-black border-2 border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 hover:bg-light-blue duration-200 focus:bg-transparent">Læs mere om os</a>
-        <a href="#" class="cursor-pointer inline-flex items-center rounded-full px-9 py-3 font-mono z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 hover:bg-light-blue hover:text-primary-black hover:border-primary-black duration-200 focus:bg-transparent">Kontakt en af vores specialister <span class="arrow">→</span></a>
+        <a href="#" class="cursor-pointer inline-flex items-center rounded-full px-9 py-3 font-mono text-xs text-primary-black border-2 border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 hover:bg-light-blue duration-200 focus:bg-transparent">Læs mere</a>
+        <a href="#" class="cursor-pointer inline-flex items-center rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 hover:bg-light-blue hover:text-primary-black hover:border-primary-black duration-200 focus:bg-transparent">Kontakt en af vores specialister <span class="arrow">→</span></a>
       </div>
-      <img class="absolute top-2/3 left-48 z-0" src="assets/Organisk-blob.webp" alt="lineart" />
+      <img class="absolute top-2/3 left-48 -z-10" src="assets/Organisk-blob.webp" alt="lineart" />
     </section>
-    <section class="grid grid-cols-2 md:grid-cols-6 gap-7 z-40 mt-10 p-9 bg-white items-center justify-items-center">
+    <section class="grid grid-cols-2 md:grid-cols-6 px-6 gap-7 z-50 mt-10 p-9 bg-white items-center justify-items-center">
       <img src="assets/body-logo.svg" alt="Logo 1" class="w-28" />
       <img src="assets/besteller.webp" alt="Logo 2" class="w-28" />
       <img src="assets/Zizzi_logo-01.webp" alt="Logo 3" class="w-28" />
@@ -46,45 +46,45 @@
       <img src="assets/noisy.webp" alt="Logo 6" class="w-28" />
     </section>
 
-    <section class="section-2">
+    <section class="section-2 px-6 py-6 bg-creme">
       <div class="container">
         <div class="text-block">
-          <h2>Hvem er Refyne?</h2>
-          <p class="dynamicp">Vi er et datadrevet marketingbureau, der skaber vækst gennem SEO, betalt Google-annoncering og sociale medier. Med gennemsigtighed, dataanalyse og branchens bedste kundetilfredshed leverer vi målbare resultater, der gør en forskel.</p>
+          <h2 class="font-serif text-2xl pb-4">Hvem er Refyne?</h2>
+          <p class="dynamicp leading-relaxed">Vi er et datadrevet marketingbureau, der skaber vækst gennem SEO, betalt Google-annoncering og sociale medier. Med gennemsigtighed, dataanalyse og branchens bedste kundetilfredshed leverer vi målbare resultater, der gør en forskel.</p>
         </div>
-        <img src="assets/1696028.webp" alt="Section 2" class="sec2-image" />
+        <img src="assets/1696028.webp" alt="Section 2" class="py-6" />
       </div>
     </section>
-    <section class="cards">
+    <section class="cards px-6 py-6">
       <div>
-        <h2 class="card-h2">Vores kunder beslutter med afsæt i data. Gør du?</h2>
+        <h2 class="font-serif text-2xl pb-4 text-center pt-8">Vores kunder beslutter med afsæt i data. Gør du?</h2>
       </div>
-      <div class="cards-container">
-        <div class="card">
+      <div class="cards-container flex flex-wrap gap-4 justify-center">
+        <div class="card w-full md:w-80 border-dark-creme hover:border-primary-blue border-2 rounded-lg p-8 my-4 transition-all duration-300 group relative">
           <div class="card-details">
-            <p class="text-title">Tillid gennem transparens</p>
-            <p class="text-body">I kan se opgaver, timeforbrug, samt hvilke konsulenter der har løst opgaverne og deres pris.</p>
+            <p class="text-title font-bold text-xl pb-4">Tillid gennem transparens</p>
+            <p class="text-body leading-relaxed">I kan se opgaver, timeforbrug, samt hvilke konsulenter der har løst opgaverne og deres pris.</p>
           </div>
-          <button class="card-button">Kontakt os</button>
+          <button class="card-button absolute left-1/2 -bottom-4 transform -translate-x-1/2 invisible group-hover:visible bg-primary-blue text-white px-6 py-2 rounded-full transition-all duration-300">Kontakt os</button>
         </div>
-        <div class="card">
+        <div class="card w-full md:w-80 border-dark-creme hover:border-primary-blue border-2 rounded-lg p-8 my-4 transition-all duration-300 group relative">
           <div class="card-details">
-            <p class="text-title">Kundetilfredshed</p>
-            <p class="text-body">Vi skal tilvælges fordi vores niveau er højt. Hver måned. Derfor kan I se vores kundetilfredshed - helt tilbage til starten.</p>
+            <p class="text-title font-bold text-xl pb-4">Kundetilfredshed</p>
+            <p class="text-body leading-relaxed">Vi skal tilvælges fordi vores niveau er højt. Hver måned. Derfor kan I se vores kundetilfredshed - helt tilbage til starten.</p>
           </div>
-          <button class="card-button">Kontakt os</button>
+          <button class="card-button absolute left-1/2 -bottom-4 transform -translate-x-1/2 invisible group-hover:visible bg-primary-blue text-white px-6 py-2 rounded-full transition-all duration-300">Kontakt os</button>
         </div>
-        <div class="card">
+        <div class="card w-full md:w-80 border-dark-creme hover:border-primary-blue border-2 rounded-lg p-8 my-4 transition-all duration-300 group relative">
           <div class="card-details">
-            <p class="text-title">Referencer</p>
-            <p class="text-body">I skal ikke høre det hele fra os. Derfor giver vi mulighed for at spørge enhver kunde vi har om deres samarbejde med Refyne.</p>
+            <p class="text-title font-bold text-xl pb-4">Referencer</p>
+            <p class="text-body leading-relaxed">I skal ikke høre det hele fra os. Derfor giver vi mulighed for at spørge enhver kunde vi har om deres samarbejde med Refyne.</p>
           </div>
-          <button class="card-button">Kontakt os</button>
+          <button class="card-button absolute left-1/2 -bottom-4 transform -translate-x-1/2 invisible group-hover:visible bg-primary-blue text-white px-6 py-2 rounded-full transition-all duration-300">Kontakt os</button>
         </div>
       </div>
     </section>
 
-    <section class="section-3 container">
+    <section class="section-3 container px-6 py-6">
       <div class="subheading">Service Lines</div>
       <h2>Hvilken service line ønsker du rådgivning og hjælp til?</h2>
       <p>Når I søger rådgivning og hjælp til en specifik service line, er det vigtigt at vælge den, der bedst understøtter jeres forretningsmål og digitale strategi. Uanset om det drejer sig om at optimere jeres synlighed gennem Paid Search, forbedre jeres organiske rækkevidde med SEO, eller sikre præcis måling og indsigt via Tracking & Analytics, kan vi hjælpe. Vores eksperter dækker også områder som Data Integration og CDP, der kan sikre en mere sammenhængende og effektiv udnyttelse af jeres data på tværs af kanaler. Sammen finder vi den løsning, der skaber mest værdi for jeres virksomhed.</p>
