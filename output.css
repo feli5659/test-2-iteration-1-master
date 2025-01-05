@@ -176,6 +176,11 @@ body {
   /* 2 */
 }
 
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
 
 hr {
   height: 0;
@@ -186,13 +191,18 @@ hr {
   /* 3 */
 }
 
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
 
-
+/*
+Remove the default font size and weight for headings.
+*/
 
 h1,
 h2,
@@ -204,17 +214,30 @@ h6 {
   font-weight: inherit;
 }
 
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
 
 a {
   color: inherit;
   text-decoration: inherit;
 }
 
+/*
+Add the correct font weight in Edge and Safari.
+*/
 
 b,
 strong {
   font-weight: bolder;
 }
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
 
 code,
 kbd,
@@ -230,10 +253,17 @@ pre {
   /* 4 */
 }
 
+/*
+Add the correct font size in all browsers.
+*/
 
 small {
   font-size: 80%;
 }
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
 
 sub,
 sup {
@@ -251,7 +281,11 @@ sup {
   top: -0.5em;
 }
 
-
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
 
 table {
   text-indent: 0;
@@ -262,7 +296,11 @@ table {
   /* 3 */
 }
 
-
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
 
 button,
 input,
@@ -291,14 +329,19 @@ textarea {
   /* 3 */
 }
 
-
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
 
 button,
 select {
   text-transform: none;
 }
 
-
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
 
 button,
 input:where([type='button']),
@@ -313,6 +356,7 @@ input:where([type='submit']) {
 }
 
 /*
+Use the modern Firefox focus style for all focusable elements.
 */
 
 :-moz-focusring {
@@ -320,6 +364,7 @@ input:where([type='submit']) {
 }
 
 /*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
 */
 
 :-moz-ui-invalid {
@@ -343,6 +388,10 @@ Correct the cursor style of increment and decrement buttons in Safari.
   height: auto;
 }
 
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
 
 [type='search'] {
   -webkit-appearance: textfield;
@@ -351,11 +400,18 @@ Correct the cursor style of increment and decrement buttons in Safari.
   /* 2 */
 }
 
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
 
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -364,12 +420,17 @@ Correct the cursor style of increment and decrement buttons in Safari.
   /* 2 */
 }
 
+/*
+Add the correct display in Chrome and Safari.
+*/
 
 summary {
   display: list-item;
 }
 
-
+/*
+Removes the default spacing and border for appropriate elements.
+*/
 
 blockquote,
 dl,
@@ -404,13 +465,16 @@ menu {
   padding: 0;
 }
 
-/**/
+/*
+Reset default styling for dialogs.
+*/
 
 dialog {
   padding: 0;
 }
 
 /*
+Prevent resizing textareas horizontally by default.
 */
 
 textarea {
@@ -418,6 +482,8 @@ textarea {
 }
 
 /*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
 input::-moz-placeholder, textarea::-moz-placeholder {
@@ -436,6 +502,7 @@ textarea::placeholder {
 }
 
 /*
+Set the default cursor for buttons.
 */
 
 button,
@@ -444,6 +511,7 @@ button,
 }
 
 /*
+Make sure disabled buttons don't get the pointer cursor.
 */
 
 :disabled {
@@ -451,6 +519,9 @@ button,
 }
 
 /*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
 img,
@@ -468,6 +539,7 @@ object {
 }
 
 /*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
 img,
@@ -476,6 +548,7 @@ video {
   height: auto;
 }
 
+/* Make elements with the HTML hidden attribute stay hidden by default */
 
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
@@ -979,11 +1052,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-5xl {
