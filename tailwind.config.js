@@ -2,6 +2,7 @@ module.exports = {
   content: ["./index.html", "./netlify/functions/*.js", "assets"],
   theme: {
     colors: {
+      black: "#000000",
       white: "#ffffff",
       creme: "#f4ebe2",
       "light-creme": "#f8f7f4",
