@@ -441,7 +441,23 @@
           return;
         } else {
           // Team
+          const keywordMappings = {
+            "google annoncering": ["google ads", "ppc", "paid search"],
+            "seo": ["søgemaskineoptimering", "organic search"],
+            "paid social": ["betalt annoncering", "facebook ads", "facebook annoncering"],
+          };
 
+          function findMatchingKeyword(searchKeyword) {
+            const normalized = normalizeKeyword(searchKeyword);
+
+            if (teamData[normalized]) return normalized;
+
+            for (const [key, variations] of Object.entries(keywordMappings)) {
+              if (variations.includes(normalized)) return key;
+            }
+
+            return null;
+          }
           function renderTeamMembers(teamData) {
             const teamContainer = document.querySelector(".team-section > div");
             if (!teamContainer) return;
