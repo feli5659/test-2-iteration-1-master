@@ -446,7 +446,7 @@
             const teamContainer = document.querySelector(".team-section > div");
             if (!teamContainer) return;
 
-            teamContainer.innerHTML = ""; // Clear existing content
+            teamContainer.innerHTML = ""; 
 
             teamData.forEach((member) => {
               const memberCard = document.createElement("div");
@@ -456,7 +456,7 @@
                     <img
                         src="${member.image}"
                         alt="${member.name}"
-                        class="w-full h-full rounded-full object-fit"
+                        class="w-full h-full rounded-full object-fit pt-18"
                     />
                 </div>
                 <h3 class="text-xl font-semibold text-primary-blue">${member.name}</h3>
@@ -467,17 +467,14 @@
             });
           }
 
-          // Load team data from JSON file
           fetch("/team.json")
             .then((response) => response.json())
             .then((teamData) => {
               let relevantTeam;
 
               if (!keyword) {
-                // Show default team members when no keyword is present
                 relevantTeam = teamData.default.team;
 
-                // Update section title for default view
                 const teamTitle = document.querySelector(".team-section h2");
                 if (teamTitle) {
                   teamTitle.textContent = "Mød vores eksperter";
@@ -486,14 +483,12 @@
                 const normalizedKeyword = keyword.toLowerCase().trim();
                 relevantTeam = teamData[normalizedKeyword]?.team || teamData.default.team;
 
-                // Update team section keyword
                 const teamKeyword = document.querySelector(".team-keyword");
                 if (teamKeyword) {
                   teamKeyword.textContent = keyword.toLowerCase();
                 }
               }
 
-              // Render the team members
               renderTeamMembers(relevantTeam);
             })
             .catch((error) => {
