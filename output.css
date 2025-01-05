@@ -958,6 +958,11 @@ video {
      object-fit: cover;
 }
 
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
 .p-3 {
   padding: 0.75rem;
 }

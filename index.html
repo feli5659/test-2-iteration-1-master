@@ -441,12 +441,12 @@
           return;
         } else {
           // Team
-          
+
           function renderTeamMembers(teamData) {
             const teamContainer = document.querySelector(".team-section > div");
             if (!teamContainer) return;
 
-            teamContainer.innerHTML = ""; 
+            teamContainer.innerHTML = "";
 
             teamData.forEach((member) => {
               const memberCard = document.createElement("div");
@@ -456,7 +456,7 @@
                     <img
                         src="${member.image}"
                         alt="${member.name}"
-                        class="w-full h-full rounded-full object-fit pt-18"
+                        class="w-full h-full rounded-full object-bottom pt-18"
                     />
                 </div>
                 <h3 class="text-xl font-semibold text-primary-blue">${member.name}</h3>
