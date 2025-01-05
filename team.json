@@ -1,0 +1,34 @@
+{
+  "google": {
+    "team": [
+      {
+        "name": "Emil Petersen",
+        "title": "Senior Paid Search Consultant",
+        "description": "Emil har mere end 9 års erfaring og har løftet performance på globale og lokale setups gennem en høj faglighed og forståelse for Google Ads.",
+        "image": "/assets/emil.jpg"
+      },
+      {
+        "name": "Caroline Søltoft",
+        "title": "Paid Media Analyst",
+        "description": "Med mere end 5 års erfaring har Caroline stærke kompetencer i optimering og strukturering af en Google Ads-konto.",
+        "image": "/assets/caroline.jpg"
+      }
+    ]
+  },
+  "seo": {
+    "team": [
+      {
+        "name": "Jens Lystlund",
+        "title": "Senior SEO",
+        "description": "Jens har i sine 11 år opnået ekspert-status og har skabt resultater for stribevis af danske virksomheder.",
+        "image": "/assets/jens.jpg"
+      },
+      {
+        "name": "Joakim Raunsbæk",
+        "title": "SEO Solutions & Product Lead",
+        "description": "Joakim har mere end 6 års erfaring i krydsfeltet mellem SEO og dataanalyse, som bliver til konstante forbedringer.",
+        "image": "/assets/joakim.png"
+      }
+    ]
+  }
+}

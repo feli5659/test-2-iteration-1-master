@@ -23,7 +23,7 @@
         <a href="#signup" class="hidden md:inline-flex cursor-pointer items-center rounded-full px-9 py-3 font-mono z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 hover:bg-light-blue hover:text-primary-black hover:border-primary-black duration-200 focus:bg-transparent"> Lad os starte en dialog <span class="ml-2 transition-transform duration-200">→</span> </a>
       </div>
     </header>
-
+    <!-- hero -->
     <section class="hero container w-full max-w-screen-xl mx-auto px-6 relative h-full">
       <h3 class="text-primary-blue pb-4 pt-16 uppercase">Performance marketing bureau</h3>
       <h1 id="dynamicH1" class="font-serif text-5xl pb-9 leading-snug">
@@ -37,6 +37,7 @@
       </div>
       <img class="absolute top-2/3 left-48 h-64 -z-10 md:top-2/3 md:left-96 md:h-80 lg:right-0 lg:left-auto lg:top-32 lg:h-96" src="assets/Organisk-blob.webp" alt="lineart" />
     </section>
+    <!-- Logo grid -->
     <section class="grid grid-cols-2 md:grid-cols-6 px-6 gap-7 z-50 mt-10 p-9 bg-white items-center justify-items-center">
       <img src="assets/body-logo.svg" alt="Logo 1" class="w-28" />
       <img src="assets/besteller.webp" alt="Logo 2" class="w-28" />
@@ -45,7 +46,7 @@
       <img src="assets/Logo_BK.webp" alt="Logo 5" class="w-28" />
       <img src="assets/noisy.webp" alt="Logo 6" class="w-28" />
     </section>
-
+    <!-- Hvem er refyne -->
     <section class="section-2 px-6 py-20 bg-creme">
       <div class="container w-full max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="text-block">
@@ -55,7 +56,13 @@
         <img src="assets/1696028.webp" alt="Section 2" class="py-6" />
       </div>
     </section>
-    <section class="cards px-6 py-20">
+    <!-- Team -->
+    <section class="team-section container mx-auto px-6 py-12">
+      <h2 class="text-center text-3xl font-serif mb-12">Mød vores eksperter inden for <span class="team-keyword"></span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+    </section>
+    <!-- USP Kort -->
+    <section class="USP cards px-6 py-20">
       <div>
         <h2 class="card-h2 font-serif text-2xl pb-10 text-center pt-8">Vores kunder beslutter med afsæt i data. Gør du?</h2>
       </div>
@@ -83,7 +90,7 @@
         </div>
       </div>
     </section>
-
+    <!-- Service lines + accordion -->
     <section class="section-3 bg-white px-6 py-9">
       <div class="container w-full max-w-screen-xl mx-auto">
         <div class="service-lines pt-9">
@@ -357,7 +364,7 @@
         </div>
       </div>
     </section>
-
+    <!-- kontakt formular -->
     <section class="section-5 text-center flex flex-col items-center justify-center">
       <div class="container w-full max-w-screen-xl mx-auto"></div>
       <div class="w-full relative">
@@ -378,7 +385,7 @@
         <button type="submit" class="bg-black text-white p-3 rounded-full cursor-pointer font-bold text-lg">Send</button>
       </form>
     </section>
-
+    <!-- footer -->
     <footer class="container py-16">
       <div class="flex flex-col lg:flex-row justify-evenly gap-6 w-full max-w-screen-xl mx-auto">
         <!-- Logo Section -->
@@ -543,6 +550,75 @@
                   descriptionElement.textContent = descriptionElement.dataset.originalContent;
                 }
               });
+            });
+
+          // team
+
+          // Function to normalize keywords for matching
+          function normalizeKeyword(kw) {
+            return kw.toLowerCase().trim();
+          }
+
+          // Function to render team members
+          function renderTeamMembers(teamData) {
+            const teamContainer = document.querySelector(".team-section > div");
+            if (!teamContainer) return;
+
+            teamContainer.innerHTML = ""; // Clear existing content
+
+            teamData.forEach((member) => {
+              const memberCard = document.createElement("div");
+              memberCard.className = "flex flex-col items-center";
+              memberCard.innerHTML = `
+                <div class="relative w-48 h-48 mb-4">
+                    <img
+                        src="${member.image}"
+                        alt="${member.name}"
+                        class="w-full h-full rounded-full object-cover"
+                    />
+                </div>
+                <h3 class="text-xl font-semibold text-primary-blue">${member.name}</h3>
+                <p class="text-gray-600 mb-2">${member.title}</p>
+                <p class="text-center text-gray-500 text-sm max-w-xs">${member.description}</p>
+            `;
+              teamContainer.appendChild(memberCard);
+            });
+          }
+
+          // Load team data from JSON file
+          fetch("/team-members.json")
+            .then((response) => response.json())
+            .then((teamData) => {
+              const normalizedKeyword = normalizeKeyword(keyword);
+
+              // Find matching team or fallback
+              let relevantTeam;
+              if (teamData[normalizedKeyword]) {
+                relevantTeam = teamData[normalizedKeyword].team;
+              } else {
+                // Optional: fallback to default team or hide section
+                const teamSection = document.querySelector(".team-section");
+                if (teamSection) {
+                  teamSection.style.display = "none";
+                }
+                return;
+              }
+
+              // Update team section title
+              const teamKeyword = document.querySelector(".team-keyword");
+              if (teamKeyword) {
+                teamKeyword.textContent = keyword.toLowerCase();
+              }
+
+              // Render the team members
+              renderTeamMembers(relevantTeam);
+            })
+            .catch((error) => {
+              console.error("Error loading team data:", error);
+              const teamSection = document.querySelector(".team-section");
+              if (teamSection) {
+                teamSection.style.display = "none";
+              }
             });
         }
       });
