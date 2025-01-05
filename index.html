@@ -441,7 +441,7 @@
           return;
         } else {
           // Team
-          // Function to render team members
+          
           function renderTeamMembers(teamData) {
             const teamContainer = document.querySelector(".team-section > div");
             if (!teamContainer) return;
@@ -468,7 +468,7 @@
           }
 
           // Load team data from JSON file
-          fetch("/team-members.json")
+          fetch("/team.json")
             .then((response) => response.json())
             .then((teamData) => {
               let relevantTeam;
