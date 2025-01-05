@@ -440,6 +440,69 @@
           // Default indhold uden keyword
           return;
         } else {
+          // Team
+          // Function to render team members
+          function renderTeamMembers(teamData) {
+            const teamContainer = document.querySelector(".team-section > div");
+            if (!teamContainer) return;
+
+            teamContainer.innerHTML = ""; // Clear existing content
+
+            teamData.forEach((member) => {
+              const memberCard = document.createElement("div");
+              memberCard.className = "flex flex-col items-center";
+              memberCard.innerHTML = `
+                <div class="relative w-48 h-48 mb-4">
+                    <img
+                        src="${member.image}"
+                        alt="${member.name}"
+                        class="w-full h-full rounded-full object-cover"
+                    />
+                </div>
+                <h3 class="text-xl font-semibold text-primary-blue">${member.name}</h3>
+                <p class="text-gray-600 mb-2">${member.title}</p>
+                <p class="text-center text-gray-500 text-sm max-w-xs">${member.description}</p>
+            `;
+              teamContainer.appendChild(memberCard);
+            });
+          }
+
+          // Load team data from JSON file
+          fetch("/team-members.json")
+            .then((response) => response.json())
+            .then((teamData) => {
+              let relevantTeam;
+
+              if (!keyword) {
+                // Show default team members when no keyword is present
+                relevantTeam = teamData.default.team;
+
+                // Update section title for default view
+                const teamTitle = document.querySelector(".team-section h2");
+                if (teamTitle) {
+                  teamTitle.textContent = "Mød vores eksperter";
+                }
+              } else {
+                const normalizedKeyword = keyword.toLowerCase().trim();
+                relevantTeam = teamData[normalizedKeyword]?.team || teamData.default.team;
+
+                // Update team section keyword
+                const teamKeyword = document.querySelector(".team-keyword");
+                if (teamKeyword) {
+                  teamKeyword.textContent = keyword.toLowerCase();
+                }
+              }
+
+              // Render the team members
+              renderTeamMembers(relevantTeam);
+            })
+            .catch((error) => {
+              console.error("Error loading team data:", error);
+              const teamSection = document.querySelector(".team-section");
+              if (teamSection) {
+                teamSection.style.display = "none";
+              }
+            });
           // dynamisk h3 i hero sektion
           const h3Element = document.querySelector("h3");
           if (h3Element) {
@@ -550,75 +613,6 @@
                   descriptionElement.textContent = descriptionElement.dataset.originalContent;
                 }
               });
-            });
-
-          // team
-
-          // Function to normalize keywords for matching
-          function normalizeKeyword(kw) {
-            return kw.toLowerCase().trim();
-          }
-
-          // Function to render team members
-          function renderTeamMembers(teamData) {
-            const teamContainer = document.querySelector(".team-section > div");
-            if (!teamContainer) return;
-
-            teamContainer.innerHTML = ""; // Clear existing content
-
-            teamData.forEach((member) => {
-              const memberCard = document.createElement("div");
-              memberCard.className = "flex flex-col items-center";
-              memberCard.innerHTML = `
-                <div class="relative w-48 h-48 mb-4">
-                    <img
-                        src="${member.image}"
-                        alt="${member.name}"
-                        class="w-full h-full rounded-full object-cover"
-                    />
-                </div>
-                <h3 class="text-xl font-semibold text-primary-blue">${member.name}</h3>
-                <p class="text-gray-600 mb-2">${member.title}</p>
-                <p class="text-center text-gray-500 text-sm max-w-xs">${member.description}</p>
-            `;
-              teamContainer.appendChild(memberCard);
-            });
-          }
-
-          // Load team data from JSON file
-          fetch("/team.json")
-            .then((response) => response.json())
-            .then((teamData) => {
-              const normalizedKeyword = normalizeKeyword(keyword);
-
-              // Find matching team or fallback
-              let relevantTeam;
-              if (teamData[normalizedKeyword]) {
-                relevantTeam = teamData[normalizedKeyword].team;
-              } else {
-                // Optional: fallback to default team or hide section
-                const teamSection = document.querySelector(".team-section");
-                if (teamSection) {
-                  teamSection.style.display = "none";
-                }
-                return;
-              }
-
-              // Update team section title
-              const teamKeyword = document.querySelector(".team-keyword");
-              if (teamKeyword) {
-                teamKeyword.textContent = keyword.toLowerCase();
-              }
-
-              // Render the team members
-              renderTeamMembers(relevantTeam);
-            })
-            .catch((error) => {
-              console.error("Error loading team data:", error);
-              const teamSection = document.querySelector(".team-section");
-              if (teamSection) {
-                teamSection.style.display = "none";
-              }
             });
         }
       });

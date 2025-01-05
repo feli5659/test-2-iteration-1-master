@@ -1,4 +1,20 @@
 {
+  "default": {
+    "team": [
+      {
+        "name": "Kasper Brandt",
+        "title": "Senior Paid Search & Partner",
+        "description": "Kasper har med sine 8 års erfaring med forskellige brancher et teknisk højt niveau som dækker bade eCommerce og LeadGen.",
+        "image": "/assets/kb.jpg"
+      },
+      {
+        "name": "Thomas Astrup",
+        "title": "Senior SEO & Partner",
+        "description": "Mere end 11 år med international SEO og eCommerce har gjort Thomas til en autoritet indenfor eCommerce SEO.",
+        "image": "/assets/thomas.jpg"
+      }
+    ]
+  },
   "google": {
     "team": [
       {
