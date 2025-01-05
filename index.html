@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <!-- FONTS end -->
   </head>
-  <body class="font-montserrat font-normal bg-light-creme text-primary-black w-full max-w-screen-xl mx-auto">
+  <body class="font-montserrat font-normal bg-light-creme text-primary-black">
     <!-- Header -->
-    <header class="container mx-auto px-6 md:gap-4 py-8 flex items-center justify-between">
+    <header class="container w-full max-w-screen-xl mx-auto px-6 md:gap-4 py-8 flex items-center justify-between">
       <div class="logo py-8">
         <img src="assets/refyne-logo-black.svg" class="h-14 w-auto" src="your-logo.png" alt="Logo" />
       </div>
@@ -24,7 +24,7 @@
       </div>
     </header>
 
-    <section class="hero container mx-auto px-6 relative h-full">
+    <section class="hero container w-full max-w-screen-xl mx-auto px-6 relative h-full">
       <h3 class="text-primary-blue pb-4 pt-16 uppercase">Performance marketing bureau</h3>
       <h1 id="dynamicH1" class="font-serif text-5xl pb-9 leading-snug">
         Kan du se retningen for jeres marketing? <br />
@@ -35,7 +35,7 @@
         <a href="#" class="cursor-pointer inline-flex items-center rounded-full px-9 py-3 font-mono whitespace-nowrap text-xs md:text-base text-primary-black border-2 border-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 hover:bg-light-blue duration-200 focus:bg-transparent">Læs mere</a>
         <a href="#" class="cursor-pointer inline-flex items-center rounded-full px-9 py-3 font-mono text-xs z-40 md:text-base bg-primary-black border-primary-black text-light-creme border-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-90 hover:bg-light-blue hover:text-primary-black hover:border-primary-black duration-200 focus:bg-transparent">Kontakt en af vores specialister <span class="arrow">→</span></a>
       </div>
-      <img class="absolute top-2/3 left-48 -z-10 md:top-1/3 md:h-80" src="assets/Organisk-blob.webp" alt="lineart" />
+      <img class="absolute top-2/3 left-48 h-64 -z-10 md:top-2/3 md:left-96 md:h-80 lg:right-0 lg:left-auto lg:top-32 lg:h-96" src="assets/Organisk-blob.webp" alt="lineart" />
     </section>
     <section class="grid grid-cols-2 md:grid-cols-6 px-6 gap-7 z-50 mt-10 p-9 bg-white items-center justify-items-center">
       <img src="assets/body-logo.svg" alt="Logo 1" class="w-28" />
@@ -47,7 +47,7 @@
     </section>
 
     <section class="section-2 px-6 py-20 bg-creme">
-      <div class="container">
+      <div class="container w-full max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="text-block">
           <h2 class="font-serif text-2xl pb-4">Hvem er Refyne?</h2>
           <p class="dynamicp leading-relaxed">Vi er et datadrevet marketingbureau, der skaber vækst gennem SEO, betalt Google-annoncering og sociale medier. Med gennemsigtighed, dataanalyse og branchens bedste kundetilfredshed leverer vi målbare resultater, der gør en forskel.</p>
@@ -84,250 +84,274 @@
       </div>
     </section>
 
-    <section class="section-3 bg-white container px-6 py-6">
-      <div class="service-lines">
-        <div class="service-tag mb-5">
-          <div class="uppercase bg-dark-creme rounded-full font-bold inline-block p-4">Service Lines</div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div class="service-text">
-            <h2 class="font-serif text-2xl pb-4 pt-8 lg:pt-0">Hvilken service line ønsker du rådgivning og hjælp til?</h2>
-            <p class="leading-relaxed mb-4">Når I søger rådgivning og hjælp til en specifik service line, er det vigtigt at vælge den, der bedst understøtter jeres forretningsmål og digitale strategi. Uanset om det drejer sig om at optimere jeres synlighed gennem Paid Search, forbedre jeres organiske rækkevidde med SEO, eller sikre præcis måling og indsigt via Tracking & Analytics, kan vi hjælpe. Vores eksperter dækker også områder som Data Integration og CDP, der kan sikre en mere sammenhængende og effektiv udnyttelse af jeres data på tværs af kanaler. Sammen finder vi den løsning, der skaber mest værdi for jeres virksomhed.</p>
+    <section class="section-3 bg-white px-6 py-9">
+      <div class="container w-full max-w-screen-xl mx-auto">
+        <div class="service-lines pt-9">
+          <div class="service-tag mb-5">
+            <div class="uppercase bg-dark-creme rounded-full font-bold inline-block p-4">Service Lines</div>
           </div>
 
-          <div class="service-image">
-            <img class="w-full object-cover mb-8" src="assets/Kenneth.webp" alt="Man in chair talking to someone" />
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="service-text">
+              <h2 class="font-serif text-2xl pb-4 pt-8 lg:pt-0">Hvilken service line ønsker du rådgivning og hjælp til?</h2>
+              <p class="leading-relaxed mb-4 lg:max-w-[65ch]">Når I søger rådgivning og hjælp til en specifik service line, er det vigtigt at vælge den, der bedst understøtter jeres forretningsmål og digitale strategi. Uanset om det drejer sig om at optimere jeres synlighed gennem Paid Search, forbedre jeres organiske rækkevidde med SEO, eller sikre præcis måling og indsigt via Tracking & Analytics, kan vi hjælpe. <br /></p>
+              <p>Vores eksperter dækker også områder som Data Integration og CDP, der kan sikre en mere sammenhængende og effektiv udnyttelse af jeres data på tværs af kanaler. Sammen finder vi den løsning, der skaber mest værdi for jeres virksomhed.</p>
+            </div>
+
+            <div class="service-image">
+              <img class="w-full object-cover mb-8" src="assets/Kenneth.webp" alt="Man in chair talking to someone" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="accordion-container">
-        <div class="accordion">
-          <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
-            <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
-              <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Paid Search</span>
-              <div class="accordion-icon relative w-5 h-5">
-                <style>
-                  .accordion-icon::before,
-                  .accordion-icon::after {
-                    content: "";
-                    position: absolute;
-                    background-color: #333;
-                    transition: transform 0.3s ease;
-                  }
-                  .accordion-icon::before {
-                    width: 2px;
-                    height: 20px;
-                    left: 9px;
-                    top: 0;
-                  }
-                  .accordion-icon::after {
-                    width: 20px;
-                    height: 2px;
-                    left: 0;
-                    top: 9px;
-                  }
-                  .active .accordion-icon::before {
-                    transform: rotate(90deg);
-                  }
-                </style>
+        <div class="accordion-container py-20">
+          <div class="accordion">
+            <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
+              <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
+                <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Paid Search</span>
+                <div class="accordion-icon relative w-5 h-5">
+                  <style>
+                    .accordion-icon::before,
+                    .accordion-icon::after {
+                      content: "";
+                      position: absolute;
+                      background-color: #333;
+                      transition: transform 0.3s ease;
+                    }
+                    .accordion-icon::before {
+                      width: 2px;
+                      height: 20px;
+                      left: 9px;
+                      top: 0;
+                    }
+                    .accordion-icon::after {
+                      width: 20px;
+                      height: 2px;
+                      left: 0;
+                      top: 9px;
+                    }
+                    .active .accordion-icon::before {
+                      transform: rotate(90deg);
+                    }
+                  </style>
+                </div>
+              </div>
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
+                <div class="flex flex-col items-start lg:items-start lg:text-left lg:w-1/2 ml-auto">
+                  <p class="leading-relaxed text-left lg:text-left pr-12 pb-10">Vi analyserer jeres data for at identificere de mest profitable søgeord og målgrupper for jeres Google-annoncering. Paid search handler i 2024 om at målrette indsatsen, så hver annoncekrone arbejder optimalt.Vi ved, at Google-annoncering ofte er ét af flere ben i jeres marketing-indsats, hvilket stiller krav til ROI og evnerne til at lave kvalificerede tiltag.</p>
+                  <div class="pt-4">
+                    <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores paid search specialister i dag</button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
-              <p class="pb-4 leading-relaxed">Vi analyserer jeres data for at identificere de mest profitable søgeord og målgrupper for jeres Google-annoncering. Paid search handler i 2024 om at målrette indsatsen, så hver annoncekrone arbejder optimalt.Vi ved, at Google-annoncering ofte er ét af flere ben i jeres marketing-indsats, hvilket stiller krav til ROI og evnerne til at lave kvalificerede tiltag.</p>
-              <div class="pt-4">
-                <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores paid search specialister i dag</button>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
+              <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
+                <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Paid Social</span>
+                <div class="accordion-icon relative w-5 h-5">
+                  <style>
+                    .accordion-icon::before,
+                    .accordion-icon::after {
+                      content: "";
+                      position: absolute;
+                      background-color: #333;
+                      transition: transform 0.3s ease;
+                    }
+                    .accordion-icon::before {
+                      width: 2px;
+                      height: 20px;
+                      left: 9px;
+                      top: 0;
+                    }
+                    .accordion-icon::after {
+                      width: 20px;
+                      height: 2px;
+                      left: 0;
+                      top: 9px;
+                    }
+                    .active .accordion-icon::before {
+                      transform: rotate(90deg);
+                    }
+                  </style>
+                </div>
+              </div>
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
+                <div class="flex flex-col items-start lg:items-start lg:text-left lg:w-1/2 ml-auto">
+                  <p class="leading-relaxed text-left lg:text-left pr-12 pb-10">Paid Social er en meget bred disciplin, som rummer mange specialer. Vi kender mulighederne og sammensætter altid en brugerdefineret struktur, som tager afsæt i det enkelte brand. Annoncering på sociale medier er en disciplin hvor konkurrencen øges kontinuerligt. Derfor går vi skridtet længere end standarden. Vi tager altid afsæt i en data-first struktur.</p>
+                  <div class="pt-4">
+                    <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores paid social specialister i dag</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
-          <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
-            <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Paid Social</span>
-            <div class="accordion-icon relative w-5 h-5">
-              <style>
-                .accordion-icon::before,
-                .accordion-icon::after {
-                  content: "";
-                  position: absolute;
-                  background-color: #333;
-                  transition: transform 0.3s ease;
-                }
-                .accordion-icon::before {
-                  width: 2px;
-                  height: 20px;
-                  left: 9px;
-                  top: 0;
-                }
-                .accordion-icon::after {
-                  width: 20px;
-                  height: 2px;
-                  left: 0;
-                  top: 9px;
-                }
-                .active .accordion-icon::before {
-                  transform: rotate(90deg);
-                }
-              </style>
+          <div class="accordion">
+            <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
+              <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
+                <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">SEO</span>
+                <div class="accordion-icon relative w-5 h-5">
+                  <style>
+                    .accordion-icon::before,
+                    .accordion-icon::after {
+                      content: "";
+                      position: absolute;
+                      background-color: #333;
+                      transition: transform 0.3s ease;
+                    }
+                    .accordion-icon::before {
+                      width: 2px;
+                      height: 20px;
+                      left: 9px;
+                      top: 0;
+                    }
+                    .accordion-icon::after {
+                      width: 20px;
+                      height: 2px;
+                      left: 0;
+                      top: 9px;
+                    }
+                    .active .accordion-icon::before {
+                      transform: rotate(90deg);
+                    }
+                  </style>
+                </div>
+              </div>
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
+                <div class="flex flex-col items-start lg:items-start lg:text-left lg:w-1/2 ml-auto">
+                  <p class="leading-relaxed text-left lg:text-left pr-12 pb-10">Med afsæt i jeres data identificerer vi de rette indsatsområder i jeres SEO-arbejde. Effektiv SEO er et resultat af, at vide hvor vi skal sætte ind. SEO er et håndværk og det virker kun så længe man får noget fra hånden. Vi ved at SEO ofte overlapper andre interne funktioner i virksomheder som stiller høje krav til forventet ROI, scoping og ressourcer til implementering. Det hjælper vi også gerne med.</p>
+                  <div class="pt-4">
+                    <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores SEO specialister i dag</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
-            <p class="pb-4 leading-relaxed">Paid Social er en meget bred disciplin, som rummer mange specialer. Vi kender mulighederne og sammensætter altid en brugerdefineret struktur, som tager afsæt i det enkelte brand. Annoncering på sociale medier er en disciplin hvor konkurrencen øges kontinuerligt. Derfor går vi skridtet længere end standarden. Vi tager altid afsæt i en data-first struktur.</p>
-            <div class="pt-4">
-              <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores paid social specialister i dag</button>
+          <div class="accordion">
+            <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
+              <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
+                <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">CDP</span>
+                <div class="accordion-icon relative w-5 h-5">
+                  <style>
+                    .accordion-icon::before,
+                    .accordion-icon::after {
+                      content: "";
+                      position: absolute;
+                      background-color: #333;
+                      transition: transform 0.3s ease;
+                    }
+                    .accordion-icon::before {
+                      width: 2px;
+                      height: 20px;
+                      left: 9px;
+                      top: 0;
+                    }
+                    .accordion-icon::after {
+                      width: 20px;
+                      height: 2px;
+                      left: 0;
+                      top: 9px;
+                    }
+                    .active .accordion-icon::before {
+                      transform: rotate(90deg);
+                    }
+                  </style>
+                </div>
+              </div>
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
+                <div class="flex flex-col items-start lg:items-start lg:text-left lg:w-1/2 ml-auto">
+                  <p class="leading-relaxed text-left lg:text-left pr-12 pb-10">En CDP muliggører at udnytte det fulde potentiale af jeres kundedata – med indsigt og vækst til følge. Vi er din rådgiver gennem hele processen. Fra systemvalg til den tekniske implementering og til aktivering i annonceplatformene.</p>
+                  <div class="pt-4">
+                    <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores CDP specialister i dag</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
-          <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
-            <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">SEO</span>
-            <div class="accordion-icon relative w-5 h-5">
-              <style>
-                .accordion-icon::before,
-                .accordion-icon::after {
-                  content: "";
-                  position: absolute;
-                  background-color: #333;
-                  transition: transform 0.3s ease;
-                }
-                .accordion-icon::before {
-                  width: 2px;
-                  height: 20px;
-                  left: 9px;
-                  top: 0;
-                }
-                .accordion-icon::after {
-                  width: 20px;
-                  height: 2px;
-                  left: 0;
-                  top: 9px;
-                }
-                .active .accordion-icon::before {
-                  transform: rotate(90deg);
-                }
-              </style>
+          <div class="accordion">
+            <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
+              <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
+                <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Tracking & analytics</span>
+                <div class="accordion-icon relative w-5 h-5">
+                  <style>
+                    .accordion-icon::before,
+                    .accordion-icon::after {
+                      content: "";
+                      position: absolute;
+                      background-color: #333;
+                      transition: transform 0.3s ease;
+                    }
+                    .accordion-icon::before {
+                      width: 2px;
+                      height: 20px;
+                      left: 9px;
+                      top: 0;
+                    }
+                    .accordion-icon::after {
+                      width: 20px;
+                      height: 2px;
+                      left: 0;
+                      top: 9px;
+                    }
+                    .active .accordion-icon::before {
+                      transform: rotate(90deg);
+                    }
+                  </style>
+                </div>
+              </div>
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
+                <div class="flex flex-col items-start lg:items-start lg:text-left lg:w-1/2 ml-auto">
+                  <p class="leading-relaxed text-left lg:text-left pr-12 pb-10">Jeres data og KPI’er er vores afsæt ind i tracking-arbejdet. Den rigtige tracking kræver analyse og forståelse for jeres forretning. Tracking er et teknisk håndværk, der kræver konstant opmærksomhed på både nye såvel som gamle teknologiske og juridiske krav for at sikre værdi og compliance. Vi ved, at tracking kan overlappe med andre afdelinger i jeres virksomhed. Dem er vi også vant til at arbejde sammen med. Om scoping, ressourcer og effekt.</p>
+                  <div class="pt-4">
+                    <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores tracking specialister i dag</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
-            <p class="pb-4 leading-relaxed">Med afsæt i jeres data identificerer vi de rette indsatsområder i jeres SEO-arbejde. Effektiv SEO er et resultat af, at vide hvor vi skal sætte ind. SEO er et håndværk og det virker kun så længe man får noget fra hånden. Vi ved at SEO ofte overlapper andre interne funktioner i virksomheder som stiller høje krav til forventet ROI, scoping og ressourcer til implementering. Det hjælper vi også gerne med.</p>
-            <div class="pt-4">
-              <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores SEO specialister i dag</button>
-            </div>
-          </div>
-        </div>
 
-        <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
-          <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
-            <span class="font-bold text-base group-[.active]:text-primary-green">CDP</span>
-            <div class="accordion-icon relative w-5 h-5">
-              <style>
-                .accordion-icon::before,
-                .accordion-icon::after {
-                  content: "";
-                  position: absolute;
-                  background-color: #333;
-                  transition: transform 0.3s ease;
-                }
-                .accordion-icon::before {
-                  width: 2px;
-                  height: 20px;
-                  left: 9px;
-                  top: 0;
-                }
-                .accordion-icon::after {
-                  width: 20px;
-                  height: 2px;
-                  left: 0;
-                  top: 9px;
-                }
-                .active .accordion-icon::before {
-                  transform: rotate(90deg);
-                }
-              </style>
-            </div>
-          </div>
-          <div class="accordion-content accordion-content overflow-hidden transition-all duration-300 max-h-0">
-            <p class="pb-4 leading-relaxed">En CDP muliggører at udnytte det fulde potentiale af jeres kundedata – med indsigt og vækst til følge. Vi er din rådgiver gennem hele processen. Fra systemvalg til den tekniske implementering og til aktivering i annonceplatformene.</p>
-            <div class="pt-4">
-              <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores CDP specialister i dag</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
-          <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
-            <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Tracking & analytics</span>
-            <div class="accordion-icon relative w-5 h-5">
-              <style>
-                .accordion-icon::before,
-                .accordion-icon::after {
-                  content: "";
-                  position: absolute;
-                  background-color: #333;
-                  transition: transform 0.3s ease;
-                }
-                .accordion-icon::before {
-                  width: 2px;
-                  height: 20px;
-                  left: 9px;
-                  top: 0;
-                }
-                .accordion-icon::after {
-                  width: 20px;
-                  height: 2px;
-                  left: 0;
-                  top: 9px;
-                }
-                .active .accordion-icon::before {
-                  transform: rotate(90deg);
-                }
-              </style>
-            </div>
-          </div>
-          <div class="accordion-content accordion-content overflow-hidden transition-all duration-300 max-h-0">
-            <p class="pb-4 leading-relaxed">Jeres data og KPI’er er vores afsæt ind i tracking-arbejdet. Den rigtige tracking kræver analyse og forståelse for jeres forretning. Tracking er et teknisk håndværk, der kræver konstant opmærksomhed på både nye såvel som gamle teknologiske og juridiske krav for at sikre værdi og compliance. Vi ved, at tracking kan overlappe med andre afdelinger i jeres virksomhed. Dem er vi også vant til at arbejde sammen med. Om scoping, ressourcer og effekt.</p>
-            <div class="pt-4">
-              <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores tracking specialister i dag</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
-          <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
-            <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Data integration</span>
-            <div class="accordion-icon relative w-5 h-5">
-              <style>
-                .accordion-icon::before,
-                .accordion-icon::after {
-                  content: "";
-                  position: absolute;
-                  background-color: #333;
-                  transition: transform 0.3s ease;
-                }
-                .accordion-icon::before {
-                  width: 2px;
-                  height: 20px;
-                  left: 9px;
-                  top: 0;
-                }
-                .accordion-icon::after {
-                  width: 20px;
-                  height: 2px;
-                  left: 0;
-                  top: 9px;
-                }
-                .active .accordion-icon::before {
-                  transform: rotate(90deg);
-                }
-              </style>
-            </div>
-          </div>
-          <div class="accordion-content accordion-content overflow-hidden transition-all duration-300 max-h-0">
-            <p class="pb-4 leading-relaxed">Vi hjælper med at belyse jeres data på nye måder, så den kan danne grundlag for strategiske, operationelle og taktiske beslutningsprocesser fremover. Din data er kun brugbar, hvis den bliver modelleret med henblik på formål og med tanke på kvalitet igennem alle trin – vi tilpasser altid dit setup til dine behov og sørger samtidig for, at man kan stole på det data man bruger.</p>
-            <div class="pt-4">
-              <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 border-black mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores data specialister i dag</button>
+          <div class="accordion">
+            <div class="accordion-item border-b border-gray-300 mb-1 w-full group">
+              <div class="accordion-header flex justify-between items-center py-4 cursor-pointer transition-all duration-300">
+                <span class="accordion-title font-bold text-base group-[.active]:text-primary-green">Data integration</span>
+                <div class="accordion-icon relative w-5 h-5">
+                  <style>
+                    .accordion-icon::before,
+                    .accordion-icon::after {
+                      content: "";
+                      position: absolute;
+                      background-color: #333;
+                      transition: transform 0.3s ease;
+                    }
+                    .accordion-icon::before {
+                      width: 2px;
+                      height: 20px;
+                      left: 9px;
+                      top: 0;
+                    }
+                    .accordion-icon::after {
+                      width: 20px;
+                      height: 2px;
+                      left: 0;
+                      top: 9px;
+                    }
+                    .active .accordion-icon::before {
+                      transform: rotate(90deg);
+                    }
+                  </style>
+                </div>
+              </div>
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0">
+                <div class="flex flex-col items-start lg:items-start lg:text-left lg:w-1/2 ml-auto">
+                  <p class="leading-relaxed text-left lg:text-left pr-12 pb-10">Vi hjælper med at belyse jeres data på nye måder, så den kan danne grundlag for strategiske, operationelle og taktiske beslutningsprocesser fremover. Din data er kun brugbar, hvis den bliver modelleret med henblik på formål og med tanke på kvalitet igennem alle trin – vi tilpasser altid dit setup til dine behov og sørger samtidig for, at man kan stole på det data man bruger.</p>
+                  <div class="pt-4">
+                    <button class="rounded-full px-9 py-3 font-mono text-xs z-40 bg-primary-black border-primary-black text-light-creme border-2 mb-8 transition-transform duration-200 ease-in-out hover:scale-95 hover:shadow-lg">Kontakt vores data specialister i dag</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -335,44 +359,47 @@
     </section>
 
     <section class="text-center flex flex-col items-center justify-center">
-      <section class="text-center flex flex-col items-center justify-center">
-        <div class="w-full relative">
-          <img src="assets/jens-casper-kontakt.webp" class="w-full h-auto object-cover" alt="Contact" />
-          <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center p-8">
-            <h2 class="text-light-creme text-2xl font-serif max-w-[40ch] text-center filter drop-shadow-lg">Kontakt os</h2>
-          </div>
+      <div class="container w-full max-w-screen-xl mx-auto"></div>
+      <div class="w-full relative">
+        <img src="assets/jens-casper-kontakt.webp" class="w-full h-auto object-cover" alt="Contact" />
+        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center p-8">
+          <h2 class="text-light-creme text-2xl lg:text-5xl font-serif max-w-[40ch] text-center filter drop-shadow-lg">Kontakt os</h2>
         </div>
+      </div>
 
-        <p class="max-w-3xl pt-8 px-8 leading-8 text-center">Vi vil gerne høre mere om jeres udfordringer og give jer vores tanker og overvejelser på et møde eller opkald.</p>
+      <p class="max-w-3xl pt-8 px-8 leading-8 text-center">Vi vil gerne høre mere om jeres udfordringer og give jer vores tanker og overvejelser på et møde eller opkald.</p>
 
-        <!-- Form -->
-        <form class="p-8 flex flex-col gap-4 w-full max-w-lg">
-          <input type="text" name="firstname" placeholder="First Name" required class="p-3 border border-black rounded-md" />
-          <input type="text" name="lastname" placeholder="Last Name" required class="p-3 border border-black rounded-md" />
-          <input type="email" name="email" placeholder="Email" required class="p-3 border border-black rounded-md" />
-          <textarea name="message" rows="5" placeholder="Message" required class="p-3 border border-black rounded-md"></textarea>
-          <button type="submit" class="bg-black text-white p-3 rounded-full cursor-pointer font-bold text-lg">Send</button>
-        </form>
-      </section>
+      <!-- Form -->
+      <form class="p-8 flex flex-col gap-4 w-full max-w-lg">
+        <input type="text" name="firstname" placeholder="First Name" required class="p-3 border border-black rounded-md" />
+        <input type="text" name="lastname" placeholder="Last Name" required class="p-3 border border-black rounded-md" />
+        <input type="email" name="email" placeholder="Email" required class="p-3 border border-black rounded-md" />
+        <textarea name="message" rows="5" placeholder="Message" required class="p-3 border border-black rounded-md"></textarea>
+        <button type="submit" class="bg-black text-white p-3 rounded-full cursor-pointer font-bold text-lg">Send</button>
+      </form>
     </section>
 
-    <footer>
-      <div class="container footer-content w-full max-w-screen-xl mx-auto">
-        <div class="footer-column">
-          <div class="flex justify-center"><img src="/assets/refyne-logo-black.svg" alt="Logo-footer" class="h-10 w-auto" /></div>
+    <footer class="container py-16">
+      <div class="flex flex-col lg:flex-row justify-evenly gap-6 w-full max-w-screen-xl mx-auto">
+        <!-- Logo Section -->
+        <div class="flex justify-center lg:justify-start">
+          <img src="/assets/refyne-logo-black.svg" alt="Logo-footer" class="h-10 w-auto" />
         </div>
-        <div class="footer-column flex justify-center">
-          <h3>København</h3>
-          <p>Palægade 6<br />1261 København K</p>
-        </div>
-        <div class="footer-column flex justify-center">
-          <h3>Aarhus</h3>
-          <p>Åboulevarden 69<br />8000 Aarhus C</p>
-        </div>
-        <div class="footer-column flex justify-center">
-          <h3>Kontakt</h3>
-          <p>Telefon: +45 2222 2836</p>
-          <p>Email: hello@refyne.dk</p>
+        <!-- Address Sections -->
+        <div class="flex flex-col lg:flex-row flex-wrap justify-evenly items-center lg:items-start gap-12">
+          <div class="text-center lg:text-left">
+            <h3 class="font-bold">København</h3>
+            <p>Palægade 6<br />1261 København K</p>
+          </div>
+          <div class="text-center lg:text-left">
+            <h3 class="font-bold">Aarhus</h3>
+            <p>Åboulevarden 69<br />8000 Aarhus C</p>
+          </div>
+          <div class="text-center lg:text-left">
+            <h3 class="font-bold">Kontakt</h3>
+            <p>Telefon: +45 2222 2836</p>
+            <p>Email: hello@refyne.dk</p>
+          </div>
         </div>
       </div>
     </footer>
