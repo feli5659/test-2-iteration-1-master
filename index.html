@@ -586,7 +586,7 @@
           }
 
           // Load team data from JSON file
-          fetch("/team-members.json")
+          fetch("/team.json")
             .then((response) => response.json())
             .then((teamData) => {
               const normalizedKeyword = normalizeKeyword(keyword);
