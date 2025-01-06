@@ -445,7 +445,7 @@
             return kw.toLowerCase().trim();
           }
 
-          // Team
+          // Team Json
           const keywordMappings = {
             "google annoncering": ["google ads", "ppc", "paid search"],
             seo: ["søgemaskineoptimering", "organic search"],
@@ -504,9 +504,18 @@
                 relevantTeam = teamData.default.team;
               }
 
+              // Update the heading text based on whether we have a keyword
               const teamKeyword = document.querySelector(".team-keyword");
               if (teamKeyword) {
-                teamKeyword.textContent = keyword.toLowerCase();
+                if (keyword) {
+                  teamKeyword.textContent = keyword.toLowerCase();
+                } else {
+                  // If no keyword, update the entire heading text
+                  const heading = document.querySelector(".team-section h2");
+                  if (heading) {
+                    heading.textContent = "Mød vores eksperter"; // Or whatever default text you want
+                  }
+                }
               }
 
               renderTeamMembers(relevantTeam);
