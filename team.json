@@ -12,6 +12,18 @@
         "title": "Senior SEO & Partner",
         "description": "Mere end 11 år med international SEO og eCommerce har gjort Thomas til en autoritet indenfor eCommerce SEO.",
         "image": "/assets/thomas.jpg"
+      },
+      {
+        "name": "Emil Petersen",
+        "title": "Senior Paid Search Consultant",
+        "description": "Emil har mere end 9 års erfaring og har løftet performance på globale og lokale setups gennem en høj faglighed og forståelse for Google Ads.",
+        "image": "/assets/emil.jpg"
+      },
+      {
+        "name": "Joakim Raunsbæk",
+        "title": "SEO Solutions & Product Lead",
+        "description": "Joakim har mere end 6 års erfaring i krydsfeltet mellem SEO og dataanalyse, som bliver til konstante forbedringer.",
+        "image": "/assets/joakim.png"
       }
     ]
   },

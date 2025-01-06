@@ -504,19 +504,18 @@
                 relevantTeam = teamData[matchedKeyword].team;
               } else {
                 relevantTeam = teamData.default.team;
+                console.log("Relevant Team Data:", relevantTeam);
               }
 
-              // Update the heading and handle the "inden for" text
+              // Update heading
               const heading = document.querySelector(".team-section h2");
               const keywordSpan = document.querySelector(".team-keyword");
 
               if (!keyword) {
-                // If no keyword, just show "Mød vores eksperter"
                 if (heading) {
                   heading.textContent = "Mød vores eksperter";
                 }
               } else {
-                // If there is a keyword, set it in the span
                 if (keywordSpan) {
                   keywordSpan.textContent = keyword.toLowerCase();
                 }
@@ -528,7 +527,7 @@
               console.error("Error loading team data:", error);
               const teamSection = document.querySelector(".team-section");
               if (teamSection) {
-                teamSection.style.display = "none";
+                // teamSection.style.display = "none";
               }
             });
 
