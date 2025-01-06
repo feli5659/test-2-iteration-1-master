@@ -482,6 +482,8 @@
           fetch("/team.json")
             .then((response) => response.json())
             .then((teamData) => {
+              let relevantTeam;
+
               function findMatchingKeyword(searchKeyword) {
                 if (!searchKeyword) return null;
                 const normalized = normalizeKeyword(searchKeyword);
@@ -497,15 +499,14 @@
                 return null;
               }
 
-              let relevantTeam;
               const matchedKeyword = findMatchingKeyword(keyword);
 
               if (matchedKeyword && teamData[matchedKeyword]) {
                 relevantTeam = teamData[matchedKeyword].team;
               } else {
                 relevantTeam = teamData.default.team;
-                console.log("Relevant Team Data:", relevantTeam);
               }
+              console.log("Relevant Team Data:", relevantTeam);
 
               // Update heading
               const heading = document.querySelector(".team-section h2");
@@ -527,7 +528,7 @@
               console.error("Error loading team data:", error);
               const teamSection = document.querySelector(".team-section");
               if (teamSection) {
-                // teamSection.style.display = "none";
+                teamSection.style.display = "none";
               }
             });
 
