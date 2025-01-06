@@ -462,17 +462,17 @@
               const memberCard = document.createElement("div");
               memberCard.className = "flex flex-col items-center";
               memberCard.innerHTML = `
-                   <div class="relative w-48 h-48 mb-4">
-                       <img
-                           src="${member.image}"
-                           alt="${member.name}"
-                           class="w-full h-full rounded-full object-cover pt-18"
-                       />
-                   </div>
-                   <h3 class="text-xl font-semibold text-primary-blue">${member.name}</h3>
-                   <p class="text-gray-600 mb-2">${member.title}</p>
-                   <p class="text-center text-primary-black text-sm max-w-xs">${member.description}</p>
-               `;
+                    <div class="relative w-48 h-48 mb-4">
+                        <img
+                            src="${member.image}"
+                            alt="${member.name}"
+                            class="w-full h-full rounded-full object-cover pt-18"
+                        />
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary-blue">${member.name}</h3>
+                    <p class="text-gray-600 mb-2">${member.title}</p>
+                    <p class="text-center text-primary-black text-sm max-w-xs">${member.description}</p>
+                `;
               teamContainer.appendChild(memberCard);
             });
           }
@@ -480,8 +480,8 @@
           fetch("/team.json")
             .then((response) => response.json())
             .then((teamData) => {
-              // Move findMatchingKeyword inside where teamData is available
               function findMatchingKeyword(searchKeyword) {
+                if (!searchKeyword) return null;
                 const normalized = normalizeKeyword(searchKeyword);
 
                 // Direct match
@@ -498,23 +498,19 @@
               let relevantTeam;
               const matchedKeyword = findMatchingKeyword(keyword);
 
-              if (matchedKeyword) {
+              if (matchedKeyword && teamData[matchedKeyword]) {
                 relevantTeam = teamData[matchedKeyword].team;
               } else {
                 relevantTeam = teamData.default.team;
               }
 
-              // Update the heading text based on whether we have a keyword
-              const teamKeyword = document.querySelector(".team-keyword");
-              if (teamKeyword) {
+              // Update the heading text
+              const heading = document.querySelector(".team-section h2");
+              if (heading) {
                 if (keyword) {
-                  teamKeyword.textContent = keyword.toLowerCase();
+                  heading.innerHTML = `Mød vores eksperter inden for <span class="team-keyword">${keyword.toLowerCase()}</span>`;
                 } else {
-                  // If no keyword, update the entire heading text
-                  const heading = document.querySelector(".team-section h2");
-                  if (heading) {
-                    heading.textContent = "Mød vores eksperter"; // Or whatever default text you want
-                  }
+                  heading.textContent = "Mød vores eksperter";
                 }
               }
 
