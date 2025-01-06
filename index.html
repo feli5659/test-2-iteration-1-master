@@ -478,12 +478,11 @@
               teamContainer.appendChild(memberCard);
             });
           }
+          let relevantTeam;
 
           fetch("/team.json")
             .then((response) => response.json())
             .then((teamData) => {
-              let relevantTeam;
-
               function findMatchingKeyword(searchKeyword) {
                 if (!searchKeyword) return null;
                 const normalized = normalizeKeyword(searchKeyword);
