@@ -58,7 +58,9 @@
     </section>
     <!-- Team -->
     <section class="team-section container mx-auto px-6 py-12">
-      <h2 class="text-center text-3xl font-serif mb-12 py-8">Mød vores eksperter inden for <span class="team-keyword"></span></h2>
+      <h2 class="text-center text-3xl font-serif mb-12 py-8">
+        Mød vores eksperter<span class="keyword-container hidden empty:hidden"> inden for <span class="team-keyword"></span></span>
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
     </section>
     <!-- USP Kort -->
@@ -504,13 +506,19 @@
                 relevantTeam = teamData.default.team;
               }
 
-              // Update the heading text
+              // Update the heading and handle the "inden for" text
               const heading = document.querySelector(".team-section h2");
-              if (heading) {
-                if (keyword) {
-                  heading.innerHTML = `Mød vores eksperter inden for <span class="team-keyword">${keyword.toLowerCase()}</span>`;
-                } else {
+              const keywordSpan = document.querySelector(".team-keyword");
+
+              if (!keyword) {
+                // If no keyword, just show "Mød vores eksperter"
+                if (heading) {
                   heading.textContent = "Mød vores eksperter";
+                }
+              } else {
+                // If there is a keyword, set it in the span
+                if (keywordSpan) {
+                  keywordSpan.textContent = keyword.toLowerCase();
                 }
               }
 
